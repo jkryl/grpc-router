@@ -1,0 +1,16 @@
+[package]
+name = "grpc-router"
+version = "0.1.0"
+license = "MIT"
+edition = "2018"
+authors = ["Jan Kryl <jan.kryl@mayadata.io>"]
+description = "Temporary workaround for https://github.com/tower-rs/tower-grpc/issues/2"
+repository = "https://github.com/jkryl/grpc-router"
+
+[dependencies]
+bytes = "0.4"
+futures = "0.1"
+http = "0.1"
+tower-service = "0.2.0"
+tower-hyper = "0.1.0"
+tower-grpc = { version = "=0.1.0", features = ["tower-hyper"] }
